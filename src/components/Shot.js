@@ -2,23 +2,24 @@ import React, { Component } from 'react';
 
 class Shot extends Component {
   render() {
+    const currentObject = this.props.info
     return (
       <article>
         <div>
           <div className='shot'>
             <picture>
-              <img src='https://cdn.dribbble.com/users/23795/screenshots/2241261/open-uri20150912-3-14makg2_1x' />
+              <img src={currentObject.img} />
             </picture>
             <section>
               <ul className='stats'>
                 <li>
-                  <i className='fa fa-eye'></i> 28,328
+                  <i className='fa fa-eye'></i> {currentObject.stats[0]}
                 </li>
                 <li>
-                  <i className='fa fa-comment'></i> 10
+                  <i className='fa fa-comment'></i>  {currentObject.stats[1]}
                 </li>
                 <li>
-                  <i className='fa fa-heart'></i> 862
+                  <i className='fa fa-heart'></i>  {currentObject.stats[2]}
                 </li>
               </ul>
             </section>
@@ -26,9 +27,9 @@ class Shot extends Component {
           <footer className='author'>
             <a href='#'>
               <picture>
-                <img src='https://cdn.dribbble.com/users/519846/avatars/mini/8010008dd2de026ecb0f23a48226b5f5.png?1413748190' />
+                <img src={currentObject.author.avatar} />
               </picture>
-              <span>Musixmatch</span>
+              <span>{currentObject.author.name}</span>
             </a>
           </footer>
         </div>

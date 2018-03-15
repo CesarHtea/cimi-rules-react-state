@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Shot from './Shot';
-
+import data from '../data/data';
 
 class Shots extends Component {  
   render() {
@@ -8,9 +8,9 @@ class Shots extends Component {
       <section>
         <div className='container'>
           <div className='shots'>
-            <Shot />
-            <Shot />
-            <Shot />
+            {data.map(function(dribb){
+              return <Shot info={dribb} key={dribb.key}/>
+            })}
           </div>
         </div>
       </section>

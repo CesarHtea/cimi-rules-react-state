@@ -1,4 +1,4 @@
-const data = [{
+export default [{
   key: 1,
   img: 'https://cdn.dribbble.com/users/23795/screenshots/2241261/open-uri20150912-3-14makg2_1x',
   stats: ['28,328', '10', '862'],
